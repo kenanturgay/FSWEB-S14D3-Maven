@@ -37,19 +37,15 @@ public class CarSkeleton {
 
         if (carSkeleton instanceof ElectricCar) {
 
-            ElectricCar electricCar = (ElectricCar) carSkeleton;
-            System.out.println("The car engine is starting with electric. Per charge :"+ electricCar.getAvgKmPerCharge() + " battery size: " + electricCar.getBatterySize());
+            System.out.println("The car engine is starting with electric. Per charge :"+ ((ElectricCar)carSkeleton).getAvgKmPerCharge() + " battery size: " + ((ElectricCar)carSkeleton).getBatterySize());
 
         } else if (carSkeleton instanceof HybridCar) {
 
-            HybridCar hybridCar = (HybridCar) carSkeleton;
-            System.out.println("The car engine is starting with hybrid. Per charge: " + hybridCar.getAvgKmPerLitre() + " batterySize: " + hybridCar.getBatterySize() + " cylinder: " + hybridCar.getCylinders());
+            System.out.println("The car engine is starting with hybrid. Per charge: " + ((HybridCar)carSkeleton).getAvgKmPerLiter() + " battery size: " + ((HybridCar)carSkeleton).getBatterySize() + " cylinder: " + ((HybridCar)carSkeleton).getCylinders());
 
         } else if (carSkeleton instanceof GasPoweredCar) {
 
-            GasPoweredCar gasPoweredCar = (GasPoweredCar) carSkeleton;
-            System.out.println("The car engine is starting with gaspowered car. Per charge: " + gasPoweredCar.getAverageKmPerLitre() + " cylinders :" + gasPoweredCar.getCylinders());
-
+            System.out.println("The car engine is starting with gas. Per litre: " + ((GasPoweredCar)carSkeleton).getAverageKmPerLiter() + " cylinder: " + ((GasPoweredCar)carSkeleton).getCylinders());
 
         } else {
             System.out.println("invalid car type");

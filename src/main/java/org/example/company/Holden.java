@@ -1,22 +1,23 @@
 package org.example.company;
 
 public class Holden extends Car {
-    public Holden(int cylinders, String name) {
-        super(cylinders, name);
-    }
 
-    @Override
-    public void startEngine() {
-        System.out.println(getClass().getSimpleName() + " the car's engine is starting");
-    }
+        public Holden(int cylinders, String name) {
+            super(cylinders, name);
+        }
 
-    @Override
-    public void accelerate() {
-        System.out.println(getClass().getSimpleName() + " the car is accelerating");
-    }
+        @Override
+        public String startEngine() {
+            return getName()+"is starting";
+        }
 
-    @Override
-    public void brake() {
-        System.out.println(getClass().getSimpleName() + " the car is braking");
-    }
+        @Override
+        public String accelerate() {
+            return getName()+"is accelerating";
+        }
+
+        @Override
+        public String brake() {
+            return getName()+"is braking";
+        }
 }

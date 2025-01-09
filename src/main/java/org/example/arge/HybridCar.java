@@ -1,13 +1,13 @@
 package org.example.arge;
 
 public class HybridCar extends  CarSkeleton{
-    private double avgKmPerLitre;
+    private double avgKmPerLiter;
     private int batterySize;
     private int cylinders;
 
-    public HybridCar(String name, String description, double avgKmPerLitre, int batterySize, int cylinders) {
+    public HybridCar(String name, String description, double avgKmPerLiter, int batterySize, int cylinders) {
         super(name, description);
-        this.avgKmPerLitre = avgKmPerLitre;
+        this.avgKmPerLiter = avgKmPerLiter;
         this.batterySize = batterySize;
         this.cylinders = cylinders;
     }
@@ -24,8 +24,8 @@ public class HybridCar extends  CarSkeleton{
         return getName() + " car starting...";
     }
 
-    public double getAvgKmPerLitre() {
-        return avgKmPerLitre;
+    public double getAvgKmPerLiter() {
+        return avgKmPerLiter;
     }
 
     public int getBatterySize() {

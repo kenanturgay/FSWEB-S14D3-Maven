@@ -2,14 +2,22 @@ package org.example.arge;
 
 public class GasPoweredCar extends CarSkeleton {
 
-    private double avgKmPerLitre;
+    private double averageKmPerLiter;
     private int cylinders;
 
 
-    public GasPoweredCar(String name, String description, double avgKmPerLitre, int cylinders) {
+    public GasPoweredCar(String name, String description, double averageKmPerLiter, int cylinders) {
         super(name, description);
-        this.avgKmPerLitre = avgKmPerLitre;
+        this.averageKmPerLiter = averageKmPerLiter;
         this.cylinders = cylinders;
+    }
+
+    public double getAverageKmPerLiter() {
+        return averageKmPerLiter;
+    }
+
+    public int getCylinders() {
+        return cylinders;
     }
 
     @Override
@@ -19,16 +27,8 @@ public class GasPoweredCar extends CarSkeleton {
 
     @Override
     public String startEngine() {
-
         runEngine(this);
         return getName() + " car starting...";
     }
 
-    public double getAverageKmPerLitre() {
-        return avgKmPerLitre;
-    }
-
-    public int getCylinders() {
-        return cylinders;
-    }
 }
